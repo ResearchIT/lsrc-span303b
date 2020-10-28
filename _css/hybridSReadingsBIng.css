@@ -1,0 +1,242 @@
+/* UNIVERSAL SETTINGS */
+
+
+
+body {
+
+  background: #999966;
+
+  margin: 0;
+
+  padding: 0;
+
+  background-color:#999966;
+
+
+
+  }
+
+  
+
+  #wrapper {
+
+	margin: auto; /* centers whole on pg */
+
+	/* border-top: 0; removes opera top margin */
+
+	width: 810px;
+
+	background-color: #999966;
+
+	/* background-image: url(../pix/borders.jpg);*/
+
+	/*background-repeat: repeat;*/
+
+	padding:20px 10px 0px 10px;
+
+} 
+
+#topmenu {
+
+	background: #fff;
+
+	float:right;
+
+	margin:0 0 0 15px;
+
+	height:50px;
+
+	width:250px;
+
+	border:0; 
+
+} 
+
+
+
+#topmenu img {
+
+	border:0; 
+
+	float:right;
+
+} 
+
+#topmenu input {
+
+	border:0; 
+
+	float:left;
+
+} 
+
+#container {
+
+	background: #fff;
+
+	border:#000000 1px solid;
+
+	margin: 10px 15px 100px 15px;
+
+	width: 750px; /* need to hold banner in */
+
+	padding:15px 25px 15px 25px;
+
+
+
+} 
+
+
+
+p, td, ul, ol, ul, li, dl, dt, dd {
+
+	font-size:11pt;
+
+	font-weight:100;
+
+
+
+  font-family: arial, helvetica, sans-serif;
+
+  line-height:18pt;
+
+  }
+
+/* was #006*/
+
+a:link {
+
+color:#000;
+
+text-decoration:none;
+
+}
+
+a:active {
+
+color:#000;
+
+text-decoration:none;
+
+}
+
+a:hover {
+
+color:#000;
+
+
+
+
+
+}
+
+a:visited { 
+
+color:#000;
+
+text-decoration:none; 
+
+}
+
+
+
+.hide { display: none; }
+
+
+
+.clear {
+
+  clear: both;
+
+  font-size: 0;
+
+}
+
+  
+
+.hilite {
+
+
+
+
+
+}
+
+
+
+
+
+h1 {
+
+font-size:26pt;
+
+font-family:"Times New Roman", Times, serif;
+
+line-height:18pt;
+
+font-weight:500;
+
+margin:100px 0 0 0;
+
+  }
+
+  
+
+  h2 {
+
+font-size:20pt;
+
+font-family:"Times New Roman", Times, serif;
+
+font-weight:500;
+
+  }
+
+  
+
+    h3 {
+
+font-size:14pt;
+
+font-family:"Times New Roman", Times, serif;
+
+font-weight:500;
+
+margin: 15px 0 -20px 0;
+
+padding:0;
+
+  }
+
+  
+
+.intro {
+
+font-size:110%;
+
+font-family:Verdana, Arial, Helvetica, sans-serif;
+
+font-variant:small-caps;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+#breakit {
+
+display:block;
+
+height:2em;
+
+clear:left;
+
+}
+

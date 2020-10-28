@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<audacityproject projname="lec8neg_data" version="1.1.0" audacityversion="1.2.6" sel0="45.5575510204" sel1="46.7069387755" vpos="0" h="40.9716099773" zoom="86.1328125000" rate="44100.000000" >
+	<tags title="renace" artist="Carrillo" album="Spanish 202 Hybrid" track="-1" year="2010" genre="0" comments="" id3v2="1" />
+	<wavetrack name="Audio Track" channel="2" linked="0" offset="0.00000000" rate="44100.000000" gain="1.000000" pan="0.000000" >
+		<sequence maxsamples="262144" sampleformat="262159" numsamples="2179584" >
+			<waveblock start="0" >
+				<simpleblockfile filename='b00000.au' len='262144' min='-1.000000' max='0.346177' rms='0.072966'/>
+			</waveblock>
+			<waveblock start="262144" >
+				<simpleblockfile filename='b00001.au' len='262144' min='-0.722422' max='0.550790' rms='0.060972'/>
+			</waveblock>
+			<waveblock start="524288" >
+				<simpleblockfile filename='b00002.au' len='262144' min='-0.672808' max='0.364716' rms='0.061053'/>
+			</waveblock>
+			<waveblock start="786432" >
+				<simpleblockfile filename='b00003.au' len='262144' min='-0.808998' max='0.687750' rms='0.065194'/>
+			</waveblock>
+			<waveblock start="1048576" >
+				<simpleblockfile filename='b00004.au' len='262144' min='-0.669392' max='0.587604' rms='0.085919'/>
+			</waveblock>
+			<waveblock start="1310720" >
+				<simpleblockfile filename='b00005.au' len='262144' min='-0.963790' max='0.202258' rms='0.071523'/>
+			</waveblock>
+			<waveblock start="1572864" >
+				<simpleblockfile filename='b00006.au' len='262144' min='-0.822647' max='0.694321' rms='0.079783'/>
+			</waveblock>
+			<waveblock start="1835008" >
+				<simpleblockfile filename='b00007.au' len='262144' min='-0.739371' max='0.348139' rms='0.066196'/>
+			</waveblock>
+			<waveblock start="2097152" >
+				<simpleblockfile filename='b00008.au' len='82432' min='-0.022214' max='0.017361' rms='0.000592'/>
+			</waveblock>
+		</sequence>
+		<envelope numpoints='0'>
+		</envelope>
+	</wavetrack>
+</audacityproject>
