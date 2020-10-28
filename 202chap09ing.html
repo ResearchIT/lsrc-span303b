@@ -1,0 +1,153 @@
+<cfprocessingdirective pageencoding="utf-8">
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/hybridSpanishIng.dwt" codeOutsideHTMLIsLocked="true" -->
+
+
+
+<head>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!-- InstanceBeginEditable name="doctitle" -->
+
+<title>Capítulo 9  - Ingeniería</title>
+
+<!-- InstanceEndEditable -->
+
+
+
+<script type="text/javascript" src="js/prototype.js"></script>
+
+<script type="text/javascript" src="js/scriptaculous.js?load=effects,builder"></script>
+
+<script type="text/javascript" src="js/lightbox.js"></script>
+
+<link rel="stylesheet" href="js/lightbox.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="js/changeglossIng.js"></script>
+
+
+
+
+
+<!-- InstanceBeginEditable name="head" -->
+
+<!-- InstanceEndEditable -->
+
+
+
+<link rel="stylesheet" id="stylesheet" href="_css/hybridSReadingsIng.css"  type="text/css" media="all">
+
+
+
+
+
+
+
+<script type="text/javascript" src="overlib.js">
+
+</script>
+
+
+
+
+
+
+
+</head>
+
+
+
+<body onload="initLightbox();">
+
+<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+
+
+
+<div id="wrapper">
+
+
+
+
+
+<div id="container">
+
+<div id="fade" class="black_overlay"></div>
+
+  <div id="topmenu">
+
+  <input name="Click2" type="image" onclick="showGloss();" src="pix/showgloss.jpg" /> 
+
+  <input name="Click1" type="image" onclick="hideGloss();" src="pix/hidegloss.jpg"><input name="Click3" type="image" onclick="strongGloss();" src="pix/highgloss.jpg"/>
+
+  <!-- InstanceBeginEditable name="pdfdocument" -->
+
+  <a href="" onclick="window.print()"><img src="pix/pdficon.jpg" alt="Download PDF" width="54" height="41"  /></a>
+
+  <!-- InstanceEndEditable -->
+
+  <a rel="lightbox" href="pix/newhelp.jpg"><img border="0" src="pix/questionicon.jpg" /></a></div>
+
+
+
+<!-- InstanceBeginEditable name="Body" -->
+<h1>Crea un traductor en tu web con Google AJAX Language API 
+</h1>
+<p>Vía Dirson (http://google.dirson.com. Noticias de google en español) me entero de que Google publicó recientemente el API (Interfaz de Aplicaciones de Programaciones) que permite realizar traducciones de textos. Esto es posible hacerlo mediante Ajax. Ajax es una técnica de desarrollo web para crear aplicaciones interactivas.  Las <a href="javascript:void(0);"onclick="return overlib('\<embed src=\'storyline/herramientas202ing.swf - Storyline output/story.html\'\\></embed\>', STICKY, HAUTO, VAUTO, CLOSETEXT,closeimg, CAPTION, 'herramientas');"onmouseoff="return nd();">herramientas</a> Ajax permiten a los desarrolladores detectar y traducir textos en 13 idiomas (uno de ellos, el español). <img src="pix/202lec9INGlenguas.jpg" width="240" height="240" alt="lenguas" border="0" style="margin:20px 0 0 0; padding:0 0 0 15px; float:right;"/></p>
+<p>Google nos tiene acostumbrados a implementar APIs que son muy sencillas de usar, y en este caso nos <a href="javascript:void(0);"onclick="return overlib('\<embed src=\'storyline/haciafalta202ing.swf - Storyline output/story.html\'\\></embed\>', STICKY, HAUTO, VAUTO, CLOSETEXT,closeimg, CAPTION, 'hacía mucha falta');"onmouseoff="return nd();">hacía mucha falta</a>.  Para demostrarlo, vamos a crear una página web con un sencillo traductor en Javascript, comentando paso por paso lo que hay que hacer para que podáis adaptarlo a vuestras necesidades o requisitos.
+</p>
+<h2>Paso 1: Incluir el API
+</h2>
+<p>La inclusión de las funciones necesarias para realizar la traducción es muy sencilla. Solamente hay que incluir el siguiente código, por ejemplo, en la sección HEAD de la página:
+  
+</p>
+<p>&lt;script  type=&quot;text/javascript&quot;<br />
+src=&quot;http://www.google.com/jsapi&quot;&gt;<br />
+&lt;/script&gt;<br />
+&lt;script type=&quot;text/javascript&quot;&gt; <br />
+google.load(&quot;language&quot;, &quot;1&quot;); <br />
+&lt;/script&gt;<br />
+</p>
+<p>El primer bloque descarga a cliente la librería javascript Ajax API Loader, que es el cargador genérico de librerías Ajax utilizado por Google. Éste se usa en el segundo bloque script para cargar, llamando a la función google.load el API "language" (traductor), en su versión 1 (el segundo parámetro).
+</p>
+<h2>Paso 2: Creamos el interfaz
+</h2>
+<p>Nuestro traductor será realmente simple. Además, vamos a <a href="javascript:void(0);"onclick="return overlib('\<embed src=\'storyline/tenerencuenta.swf - Storyline output/story.html\'\\></embed\>', STICKY, HAUTO, VAUTO, CLOSETEXT,closeimg, CAPTION, 'tener en cuenta');"onmouseoff="return nd();">tener en cuenta</a> un pequeño subconjunto de los idiomas permitidos para no complicar mucho el código, aunque podéis añadir todos los que consideréis necesarios. 
+  
+</p>
+<p>El resultado será como el mostrado en la siguiente imagen.  <img src="pix/202lec9INGtraductor.jpg" width="310" height="262" alt="pantalla traductor" border="0" style="margin:20px 0 0 0; padding:0 15px 0 0px; float:left;"/></p>
+<p>El código fuente completo lo  encontraréis al final del post, por eso no voy a repetirlo aquí. Simplemente indicar que tendremos un TextArea donde el usuario introducirá el texto a traducir, dos desplegables con los idiomas origen y destino de la traducción, y un botón que iniciará la acción a través del evento onclick. Por último, se reservará una zona en la que insertaremos el resultado de la traducción.
+  
+</p>
+<p>Ah, un detalle interesante: en el desplegable de idiomas de origen se ha creado un elemento en el desplegable "Auto", cuyo valor es un string vacío; esto indicará al motor de traducción inferir el idioma a partir del texto enviado.
+</p>
+<h2>Paso 3: ¡Traducimos!  </h2>
+<p>Al <a href="javascript:void(0);"onclick="return overlib('\<embed src=\'storyline/pulsar.swf - Storyline output/story.html\'\\></embed\>', STICKY, HAUTO, VAUTO, CLOSETEXT,closeimg, CAPTION, 'pulsar');"onmouseoff="return nd();">pulsar</a> el botón hará una llamada a la función Onclick(), desde donde se realizará la traducción del texto introducido en el TextArea.
+  
+  Como podréis observar en el código, en primer lugar obtendremos los valores de los distintos parámetros, el texto a traducir y los idiomas origen y destino, y lo introducimos en variables para facilitar su tratamiento.  </p>
+<p>var  text = document.getElementById(&quot;text&quot;).value;<br />
+var srcLang = document.getElementById(&quot;srcLang&quot;).value;<br />
+var dstLang = document.getElementById(&quot;dstLang&quot;).value;</p>
+<p>Luego, realizamos la llamada al traductor. El primer parámetro será el texto a traducir, seguido de los idiomas (origen y destino), y por último se introduce la función callback que será invocada cuando finalice la operación; hay que <a href="javascript:void(0);"onclick="return overlib('\<embed src=\'storyline/tenerencuenta.swf - Storyline output/story.html\'\\></embed\>', STICKY, HAUTO, VAUTO, CLOSETEXT,closeimg, CAPTION, 'tener en cuenta');"onmouseoff="return nd();">tener en cuenta</a> que la traducción es realizada a través de una llamada asíncrona a los servidores de Google:  </p>
+<p>google.language.translate(text,  srcLang, dstLang, function(result) <br />
+{<br />
+if (!result.error) <br />
+{ <br />
+var resultado = document.getElementById(&quot;result&quot;); <br />
+resultado.innerHTML = result.translation; <br />
+}<br />
+else alert(result.error.message);<br />
+}<br />
+);</p>
+<p>Como podéis observar, y es quizás lo único extraño que tiene esta instrucción, el callback se ha definido como una función anónima definida en el espacio del mismo parámetro.  </p>
+<p>Para los que queráis jugar con esto directamente, ahí va el código listo para un copiar y pegar. </p>
+<p>&lt;html&gt;<br />
+  &lt;head&gt;<br />
+  &lt;title&gt;Traductor&lt;/title&gt;<br />
+  &lt;script type=&quot;text/javascript&quot;  src=&quot;http://www.google.com/jsapi&quot;&gt;&lt;/script&gt;<br />
+  &lt;script type=&quot;text/javascript&quot;&gt; <br />
+  goog
