@@ -80,7 +80,7 @@
 
   <div id="topmenu">
 
-  <input name="Click2" type="image" onclick="showGloss();" src="pix/showgloss.jpg" /> 
+  <input name="Click2" type="image" onclick="showGloss();" src="pix/showgloss.jpg" />
 
   <input name="Click1" type="image" onclick="hideGloss();" src="pix/hidegloss.jpg"><input name="Click3" type="image" onclick="strongGloss();" src="pix/highgloss.jpg"/>
 
@@ -95,7 +95,7 @@
 
 
 <!-- InstanceBeginEditable name="Body" -->
-<h1>Crea un traductor en tu web con Google AJAX Language API 
+<h1>Crea un traductor en tu web con Google AJAX Language API
 </h1>
 <p>Vía Dirson (http://google.dirson.com. Noticias de google en español) me entero de que Google publicó recientemente el API (Interfaz de Aplicaciones de Programaciones) que permite realizar traducciones de textos. Esto es posible hacerlo mediante Ajax. Ajax es una técnica de desarrollo web para crear aplicaciones interactivas.  Las <a href="javascript:void(0);"onclick="return overlib('\<embed src=\'storyline/herramientas202ing.swf - Storyline output/story.html\'\\></embed\>', STICKY, HAUTO, VAUTO, CLOSETEXT,closeimg, CAPTION, 'herramientas');"onmouseoff="return nd();">herramientas</a> Ajax permiten a los desarrolladores detectar y traducir textos en 13 idiomas (uno de ellos, el español). <img src="pix/202lec9INGlenguas.jpg" width="240" height="240" alt="lenguas" border="0" style="margin:20px 0 0 0; padding:0 0 0 15px; float:right;"/></p>
 <p>Google nos tiene acostumbrados a implementar APIs que son muy sencillas de usar, y en este caso nos <a href="javascript:void(0);"onclick="return overlib('\<embed src=\'storyline/haciafalta202ing.swf - Storyline output/story.html\'\\></embed\>', STICKY, HAUTO, VAUTO, CLOSETEXT,closeimg, CAPTION, 'hacía mucha falta');"onmouseoff="return nd();">hacía mucha falta</a>.  Para demostrarlo, vamos a crear una página web con un sencillo traductor en Javascript, comentando paso por paso lo que hay que hacer para que podáis adaptarlo a vuestras necesidades o requisitos.
@@ -103,7 +103,7 @@
 <h2>Paso 1: Incluir el API
 </h2>
 <p>La inclusión de las funciones necesarias para realizar la traducción es muy sencilla. Solamente hay que incluir el siguiente código, por ejemplo, en la sección HEAD de la página:
-  
+
 </p>
 <p>&lt;script  type=&quot;text/javascript&quot;<br />
 src=&quot;http://www.google.com/jsapi&quot;&gt;<br />
@@ -116,18 +116,18 @@ google.load(&quot;language&quot;, &quot;1&quot;); <br />
 </p>
 <h2>Paso 2: Creamos el interfaz
 </h2>
-<p>Nuestro traductor será realmente simple. Además, vamos a <a href="javascript:void(0);"onclick="return overlib('\<embed src=\'storyline/tenerencuenta.swf - Storyline output/story.html\'\\></embed\>', STICKY, HAUTO, VAUTO, CLOSETEXT,closeimg, CAPTION, 'tener en cuenta');"onmouseoff="return nd();">tener en cuenta</a> un pequeño subconjunto de los idiomas permitidos para no complicar mucho el código, aunque podéis añadir todos los que consideréis necesarios. 
-  
+<p>Nuestro traductor será realmente simple. Además, vamos a <a href="javascript:void(0);"onclick="return overlib('\<embed src=\'storyline/tenerencuenta.swf - Storyline output/story.html\'\\></embed\>', STICKY, HAUTO, VAUTO, CLOSETEXT,closeimg, CAPTION, 'tener en cuenta');"onmouseoff="return nd();">tener en cuenta</a> un pequeño subconjunto de los idiomas permitidos para no complicar mucho el código, aunque podéis añadir todos los que consideréis necesarios.
+
 </p>
 <p>El resultado será como el mostrado en la siguiente imagen.  <img src="pix/202lec9INGtraductor.jpg" width="310" height="262" alt="pantalla traductor" border="0" style="margin:20px 0 0 0; padding:0 15px 0 0px; float:left;"/></p>
 <p>El código fuente completo lo  encontraréis al final del post, por eso no voy a repetirlo aquí. Simplemente indicar que tendremos un TextArea donde el usuario introducirá el texto a traducir, dos desplegables con los idiomas origen y destino de la traducción, y un botón que iniciará la acción a través del evento onclick. Por último, se reservará una zona en la que insertaremos el resultado de la traducción.
-  
+
 </p>
 <p>Ah, un detalle interesante: en el desplegable de idiomas de origen se ha creado un elemento en el desplegable "Auto", cuyo valor es un string vacío; esto indicará al motor de traducción inferir el idioma a partir del texto enviado.
 </p>
 <h2>Paso 3: ¡Traducimos!  </h2>
 <p>Al <a href="javascript:void(0);"onclick="return overlib('\<embed src=\'storyline/pulsar.swf - Storyline output/story.html\'\\></embed\>', STICKY, HAUTO, VAUTO, CLOSETEXT,closeimg, CAPTION, 'pulsar');"onmouseoff="return nd();">pulsar</a> el botón hará una llamada a la función Onclick(), desde donde se realizará la traducción del texto introducido en el TextArea.
-  
+
   Como podréis observar en el código, en primer lugar obtendremos los valores de los distintos parámetros, el texto a traducir y los idiomas origen y destino, y lo introducimos en variables para facilitar su tratamiento.  </p>
 <p>var  text = document.getElementById(&quot;text&quot;).value;<br />
 var srcLang = document.getElementById(&quot;srcLang&quot;).value;<br />
@@ -150,4 +150,61 @@ else alert(result.error.message);<br />
   &lt;title&gt;Traductor&lt;/title&gt;<br />
   &lt;script type=&quot;text/javascript&quot;  src=&quot;http://www.google.com/jsapi&quot;&gt;&lt;/script&gt;<br />
   &lt;script type=&quot;text/javascript&quot;&gt; <br />
-  goog
+  google.load(&quot;language&quot;, &quot;1&quot;); <br />
+  &lt;/script&gt;<br />
+  &lt;/head&gt;<br />
+  <br />
+  &lt;body&gt;<br />
+  &lt;textarea id=&quot;text&quot; rows=&quot;8&quot; cols=&quot;40&quot;&gt;Hi,  how are you?&lt;/textarea&gt;<br />
+  &lt;br /&gt;<br />
+  &lt;button onclick=&quot;onClick()&quot;&gt;<br />
+  Traducir&lt;/button&gt;<br />
+  Del idioma<br />
+  &lt;select id=&quot;srcLang&quot;&gt;<br />
+  &lt;option value=&quot;&quot;&gt;(Auto)&lt;/option&gt;<br />
+  &lt;option value=&quot;es&quot;&gt;Español&lt;/option&gt;<br />
+  &lt;option value=&quot;en&quot;&gt;Inglés&lt;/option&gt;<br />
+  &lt;option value=&quot;fr&quot;&gt;Francés&lt;/option&gt;<br />
+  &lt;/select&gt;<br />
+  Al<br />
+  &lt;select id=&quot;dstLang&quot;&gt;<br />
+  &lt;option value=&quot;es&quot;&gt;Español&lt;/option&gt;<br />
+  &lt;option value=&quot;en&quot;&gt;Inglés&lt;/option&gt;<br />
+  &lt;option value=&quot;fr&quot;&gt;Francés&lt;/option&gt;<br />
+  &lt;/select&gt;<br />
+  &lt;h3&gt;Traducción:&lt;/h3&gt;<br />
+  &lt;div id=&quot;result&quot;&gt;<br />
+  (Introduce un texto)<br />
+  &lt;/div&gt;<br />
+  &lt;/body&gt;<br />
+  &lt;script type=&quot;text/javascript&quot;&gt;<br />
+  function onClick()<br />
+  {<br />
+  // obtenemos el texto y los idiomas origen y destino<br />
+  var text = document.getElementById(&quot;text&quot;).value;<br />
+  var srcLang = document.getElementById(&quot;srcLang&quot;).value;<br />
+  var dstLang = document.getElementById(&quot;dstLang&quot;).value;<br />
+  <br />
+  // llamada al traductor<br />
+  google.language.translate(text, srcLang, dstLang, function(result) <br />
+  {<br />
+  if (!result.error) <br />
+  { <br />
+  var resultado = document.getElementById(&quot;result&quot;); <br />
+  resultado.innerHTML = result.translation; <br />
+  }<br />
+  else alert(result.error.message);<br />
+  }<br />
+  );<br />
+  }<br />
+  &lt;/script&gt;<br />
+&lt;/html&gt;</p>
+<!-- InstanceEndEditable -->
+
+</div>
+
+</div>
+
+</body>
+
+<!-- InstanceEnd --></html>
