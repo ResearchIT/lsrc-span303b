@@ -13,7 +13,7 @@
         <options>
           <option name="title_enabled" value="true">
             <options>
-              <option name="title_text" value="mangas - new link.swf" />
+              <option name="title_text" value="mangas.swf" />
             </options>
           </option>
           <option name="logo_enabled" value="false">
@@ -1370,8 +1370,8 @@
           <links>
             <slidelink slideid="_player.5gnlQJEL7fs.5d6sfa7Ujkw" displaytext="Slide" expand="false" type="slide" />
             <slidelink slideid="_player.5gnlQJEL7fs.6nmtJoCCKPM" displaytext="Slide" expand="false" type="slide" />
-            <slidelink slideid="_player.5gnlQJEL7fs.5aXEwPHiepS" displaytext="Slide" expand="false" type="slide" />
             <slidelink slideid="_player.5gnlQJEL7fs.5tyoze8pctU" displaytext="Slide" expand="false" type="slide" />
+            <slidelink slideid="_player.5gnlQJEL7fs.5aXEwPHiepS" displaytext="Slide" expand="false" type="slide" />
             <slidelink slideid="_player.5gnlQJEL7fs.65avp1XEuKH" displaytext="Slide" expand="false" type="slide" />
           </links>
         </slidelink>
