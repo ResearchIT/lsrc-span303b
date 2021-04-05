@@ -13,7 +13,7 @@
         <options>
           <option name="title_enabled" value="true">
             <options>
-              <option name="title_text" value="cordileras.swf" />
+              <option name="title_text" value="cordilleras.swf" />
             </options>
           </option>
           <option name="logo_enabled" value="false">
@@ -27,7 +27,7 @@
           </option>
           <optionlist name="tabs">
             <listitems>
-              <listitem name="resources" value="false" group="linkleft" />
+              <listitem name="resources" value="false" group="linkright" />
               <listitem name="outline" value="false" group="sidebar" />
               <listitem name="glossary" value="false" group="sidebar" />
               <listitem name="transcript" value="false" group="sidebar" />
@@ -1313,13 +1313,13 @@
   <nav_data>
     <outline>
       <links>
-        <slidelink slideid="_player.5b5iOxcRJtJ" displaytext="Template" expand="true" type="slide">
+        <slidelink slideid="_player.5gnlQJEL7fs" displaytext="Template" expand="true" type="slide">
           <links>
-            <slidelink slideid="_player.5b5iOxcRJtJ.6PjJIrBymex" displaytext="Slide" expand="false" type="slide" />
-            <slidelink slideid="_player.5b5iOxcRJtJ.62ObPkvevhZ" displaytext="Slide" expand="false" type="slide" />
-            <slidelink slideid="_player.5b5iOxcRJtJ.5tzv79PPC2y" displaytext="Slide" expand="false" type="slide" />
-            <slidelink slideid="_player.5b5iOxcRJtJ.5YxEfXsWVfy" displaytext="Slide" expand="false" type="slide" />
-            <slidelink slideid="_player.5b5iOxcRJtJ.5lHYqyITmfK" displaytext="Slide" expand="false" type="slide" />
+            <slidelink slideid="_player.5gnlQJEL7fs.5d6sfa7Ujkw" displaytext="Slide" expand="false" type="slide" />
+            <slidelink slideid="_player.5gnlQJEL7fs.6nmtJoCCKPM" displaytext="Slide" expand="false" type="slide" />
+            <slidelink slideid="_player.5gnlQJEL7fs.5tyoze8pctU" displaytext="Slide" expand="false" type="slide" />
+            <slidelink slideid="_player.5gnlQJEL7fs.5aXEwPHiepS" displaytext="Slide" expand="false" type="slide" />
+            <slidelink slideid="_player.5gnlQJEL7fs.65avp1XEuKH" displaytext="Slide" expand="false" type="slide" />
           </links>
         </slidelink>
       </links>
